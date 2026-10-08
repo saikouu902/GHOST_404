@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="whisper" content="VEhFIExBU1QgU0hBTEwgU1BFQUsuIFRIRSBGSVJTVCBBUkUgTElBUlMu">
+<title>GHOST_404</title>
+<link href="https://fonts.googleapis.com/css2?family=Creepster&family=Special+Elite&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0414;--bg2:#1a0a2b;--orange:#ff7a18;--purple:#9b5de5;--bone:#f1e6d0;--dim:#8a7aa3;--bad:#ff3b4e;--panel:rgba(20,8,36,.85);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b0414}}
+:root[data-theme="dark"]{--bg:#0b0414}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:radial-gradient(ellipse at 50% 0,var(--bg2),var(--bg) 70%);color:var(--bone);font:16px/1.65 "Special Elite",Georgia,serif;min-height:100vh;overflow-x:hidden}
+.moon{position:fixed;top:30px;right:6vw;width:90px;height:90px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff6d8,#e8c76a 70%);box-shadow:0 0 80px 20px rgba(255,200,90,.25);z-index:0}
+.fog{position:fixed;left:-20%;right:-20%;bottom:0;height:35vh;background:radial-gradient(ellipse at 30% 100%,rgba(155,93,229,.25),transparent 60%),radial-gradient(ellipse at 80% 100%,rgba(255,122,24,.15),transparent 60%);animation:drift 14s ease-in-out infinite alternate;z-index:0;pointer-events:none}
+@keyframes drift{to{transform:translateX(8%)}}
+.fl{position:fixed;font-size:26px;opacity:.35;animation:fly 18s linear infinite;z-index:0;pointer-events:none}
+@keyframes fly{from{transform:translate(-10vw,0)}50%{transform:translate(50vw,-40px)}to{transform:translate(110vw,20px)}}
+main{position:relative;z-index:2;max-width:780px;margin:0 auto;padding:18px}
+header{display:flex;justify-content:space-between;gap:8px;color:var(--dim);font-size:13px;border-bottom:1px dashed #3a2358;padding-bottom:8px;flex-wrap:wrap}
+h1{font:clamp(40px,11vw,76px)/1 Creepster,fantasy;margin:22px 0 4px;color:var(--orange);letter-spacing:3px;text-shadow:0 0 20px rgba(255,122,24,.7),3px 0 var(--purple);animation:fk 5s infinite}
+@keyframes fk{0%,90%,100%{opacity:1}92%{opacity:.4}94%{opacity:1}96%{opacity:.5}}
+h2{font:26px Creepster,fantasy;color:var(--orange);letter-spacing:2px;margin:18px 0 6px}
+.box{background:var(--panel);border:1px solid #3a2358;border-left:3px solid var(--orange);padding:14px;margin:12px 0;overflow-x:auto;white-space:pre-wrap;word-break:break-word;border-radius:4px}
+.mono{font-family:"Courier New",monospace;font-size:14px}
+.dim{color:var(--dim)}.bad{color:var(--bad)}
+input{width:100%;background:#05010a;border:1px solid var(--purple);color:var(--bone);padding:11px;font:inherit;margin:8px 0;border-radius:4px}
+input:focus{outline:2px solid var(--orange)}
+button{background:var(--orange);color:#1a0a00;border:0;padding:10px 18px;font:inherit;font-weight:bold;cursor:pointer;margin:4px 6px 4px 0;border-radius:4px;box-shadow:0 0 14px rgba(255,122,24,.4)}
+button:hover{filter:brightness(1.15)}
+button.alt{background:transparent;color:var(--purple);border:1px solid var(--purple);box-shadow:none}
+.ghost{border-left:3px solid var(--bad);padding:8px 12px;color:var(--bad);margin:12px 0;min-height:26px;font-family:"Courier New",monospace}
+.shake{animation:sh .3s}@keyframes sh{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+.chips span{display:inline-block;border:1px solid var(--purple);padding:1px 10px;margin:2px;font-size:12px;border-radius:12px;color:var(--purple)}
+canvas{max-width:100%;border:1px solid #3a2358;display:block;border-radius:4px}
+table{border-collapse:collapse}td,th{padding:3px 12px 3px 0;text-align:left}
+.tabs button{background:transparent;color:var(--dim);box-shadow:none;border-bottom:2px solid transparent;border-radius:0}.tabs button.on{color:var(--orange);border-color:var(--orange)}
+footer{margin:30px 0 10px;color:var(--dim);font-size:12px}
+
+html{-webkit-text-size-adjust:100%}
+input,button{font-size:16px;min-height:44px}
+.moon{top:auto;bottom:22px;right:18px;width:58px;height:58px;z-index:5;cursor:pointer;opacity:.9;box-shadow:0 0 40px 8px rgba(255,200,90,.3)}
+#skin{display:none;position:fixed;inset:0;z-index:9;background:rgba(5,1,10,.96);color:var(--bone);padding:20px;overflow:auto;font:13px/1.6 "Courier New",monospace;white-space:pre-wrap;word-break:break-word}
+#skin b{color:var(--orange)}
+#cvi{width:100%;height:auto;border:1px solid #3a2358;border-radius:4px;-webkit-touch-callout:default}
+@media(max-width:520px){main{padding:12px}.box{font-size:12px;padding:10px}.fl{font-size:20px}}
+.sws{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}.sw{width:44px;height:44px;min-height:44px;padding:0;border:1px solid #6a4a9a;border-radius:6px;box-shadow:none}
+</style>
+</head>
+<body>
+<div class="moon" onclick="skin()" title="a seam"></div><div id="skin" onclick="this.style.display='none'"></div><div class="fog"></div>
+<div class="fl" style="top:20%">🦇</div><div class="fl" style="top:45%;animation-delay:-6s;animation-duration:24s">👻</div><div class="fl" style="top:70%;animation-delay:-11s">🦇</div>
+<main>
+<header><span>🎃 NODE: 404.NOT.FOUND</span><span id="hud"></span></header>
+<div id="app"></div>
+<div class="chips" id="ev"></div>
+<footer id="ft"></footer>
+</main>
+<!-- the ghost left something in the walls.
+Candles gutter in the halls of ghosts
+A whisper climbs the cracked stairs of the hearth
+Nightly the organ breathes an aria
+Dust gathers where the dead once stood
+Locked doors open only for the echo
+Every window frames a hollow
+-->
+<template id="s1"><p class="dim">CONNECTION DAMAGED.</p><div class="box mono">01010100 01001000 01000101 00100000 01010000 01000001 01000111 01000101 00100000 01001000 01000001 01010011 00100000 01010100 01010111 01001111 00100000 01010011 01001011 01001001 01001110 01010011 00101110 00100000 01010000 01000101 01000101 01001100 00100000 01010100 01001000 01000101 00100000 01010011 01000101 01000011 01001111 01001110 01000100 00101110</div><p>Something was left behind in the walls of this place. It does not belong to the page, but lives inside it. <span class="dim">On a phone, the moon is a seam. Tap it.</span></p><p>Speak the key. <span class="dim">(one word, in English)</span></p></template>
+<script>
+var BL=[null, null, "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", "kKmOxzrQdw=="],TT=["", "I \u00b7 THE WHISPER", "II \u00b7 THE LETTER", "III \u00b7 THE BAIT", "IV \u00b7 THE PORTRAIT", "V \u00b7 THE KNOCKING", "VI \u00b7 THE SUSPECTS", "VII \u00b7 THE FINAL TERMINAL"];
+var DC={1:{CANDLE:"THE LIGHT WAS BAIT. LOOK AT HOW THINGS END."},2:{LIGHT:"THE COMPOSITES ONLY LIE.",BAIT:"THE COMPOSITES ONLY LIE."},3:{GLASS:"GLASS IS ONLY THE FRAME."}};
+var HT=[null, ["The hand that touches the page is not the hand that wrote it.", "Sixty-four rooms in my house, and when the guests run short I hang an equals sign on the door. The page keeps me where only the machine reads.", "Once I speak, count from the wrong end."], ["Spend once, spend again.", "A diplomat of France gave his name to a lock that turns each letter by a different amount, along a word that will not stop repeating.", "Afterwards, listen only to the lonely numbers: those that no smaller number divides, save one."], ["A grid with a landlord. Everyone else is a tenant.", "A Greek chronicler gave his name to a square of twenty-five rooms where two letters share one bed. The landlord is the hour you named.", "The landlord moves in first, and each name only once. The rest of the alphabet fills the empty rooms in order."], ["A portrait is only colours, but colours have names.", "Six symbols from sixteen name each colour. Pairs of them are the bytes of letters. Translate base sixteen into text, and leave the fence behind.", "Aleph, taw, beth, shin. The result is the reflection of what it should be."], ["Count, do not read.", "Two bursts, one letter. Prisoners shared a square of twenty-five, and one letter had no seat of its own.", "Whoever knocks from within begins at the end."], ["Nobody here is honest by default.", "Make each suspect guilty in turn. Four tongues must be true.", "Only one guilt leaves the room with the right count."], ["Six keys. Seven pairs. One key opens two doors.", "The first number is the order in which doors opened. The second counts letters along that key, from one.", "Read the pairs as written. What remains when all else is taken away?"]];
+var GM=["","YOU FOUND ME.","YOU SAW THROUGH THE LIGHT. THE LIGHT WAS BAIT.","YOU FOUND WHAT I WANTED YOU TO FIND.","THE PICTURE REMEMBERS. SO DO I.","COUNT AGAIN. I DID.","NOW YOU UNDERSTAND WHY 404 EXISTS."];
+var $=function(i){return document.getElementById(i)};
+var norm=function(s){return s.toUpperCase().replace(/[^A-Z0-9]/g,"")};
+var enc=new TextEncoder(),dec=new TextDecoder();
+var U=null,P=null,DB=null,UID=null;
+function gj(k,d){try{var v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}}
+function sj(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+async function sha(s){var b=await crypto.subtle.digest("SHA-256",enc.encode(s));return new Uint8Array(b)}
+async function hx(s){return Array.from(await sha(s)).map(function(x){return x.toString(16).padStart(2,"0")}).join("")}
+async function unlock(blob,ans){
+ var k=norm(ans);if(!k)return null;var d=Uint8Array.from(atob(blob),function(c){return c.charCodeAt(0)}),o=new Uint8Array(d.length);
+ for(var i=0;i<d.length;i+=32){var b=await sha(k+"|g404|"+(i/32));for(var j=0;j<32&&i+j<d.length;j++)o[i+j]=d[i+j]^b[j]}
+ var t;try{t=dec.decode(o)}catch(e){return null}
+ return t.slice(0,3)==="OK:"?t.slice(3):null}
+function fmt(s){var m=Math.floor(s/60),x=s%60;return (m<10?"0":"")+m+":"+(x<10?"0":"")+x}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function typeIt(el,t){var i=0;(function f(){if(i<=t.length){el.textContent=t.slice(0,i++);setTimeout(f,40)}})()}
+function elapsed(){return P.finish?P.finish:Math.floor((Date.now()-P.start)/1000)}
+function score(){return Math.max(0,1000-Math.floor(elapsed()/6)-P.wrong*10-(P.hints||0)*15)}
+function users(){return gj("g404_users",{})}
+function savep(){sj("g404_p_"+U,P);sync()}
+async function sync(){if(!DB||!U)return;try{await DB.collection("board").doc(U).set({user:U,stage:P.stage,done:!!P.finish,time:elapsed(),wrong:P.wrong,score:score(),at:Date.now()})}catch(e){}}
+function hud(){var h=$("hud");h.textContent=U?("🕯️ "+U+" · "+(P&&P.finish?"CASE CLOSED":P?fmt(elapsed())+" · ✗ "+P.wrong:"")):"CONNECTION ESTABLISHED"}
+setInterval(function(){if(U&&P)hud()},1000);
+function evid(){$("ev").innerHTML=(U&&P&&P.ans.length)?'<div class="dim" style="font-size:12px;margin-top:14px;width:100%">EVIDENCE COLLECTED:</div>'+P.ans.map(function(a){return"<span>"+esc(a)+"</span>"}).join(""):""}
+function foot(){$("ft").innerHTML=(U?'<button class="alt" onclick="logout()">[ log out ]</button> ':'')+'“If you found this, you were never supposed to.”'}
+
+function authView(mode){
+ $("app").innerHTML='<h1>GHOST_404</h1><p class="dim">“If you found this, you were never supposed to.”</p><div class="box mono">[ CONNECTION ESTABLISHED ]\nHello, investigator.\nSomeone has entered the network.\n\nIdentity: 404 NOT FOUND\nUsername: GHOST_404\n\n"I left the door open.\n You just have to find it."</div><div class="tabs"><button class="'+(mode==="l"?"on":"")+'" onclick="authView(\'l\')">LOG IN</button><button class="'+(mode==="r"?"on":"")+'" onclick="authView(\'r\')">REGISTER</button></div><input id="un" maxlength="20" autocomplete="username" placeholder="investigator / team name"><input id="pw" type="password" maxlength="40" autocomplete="current-password" placeholder="passcode (min 4 characters)">'+(mode==="r"?'<input id="fn" maxlength="40" placeholder="full name / members (optional)"><input id="sec" maxlength="30" placeholder="section / class (optional)">':'')+'<button onclick="auth(\''+mode+'\')">[ '+(mode==="r"?"CREATE IDENTITY":"BEGIN INVESTIGATION")+' ]</button><div class="ghost" id="gh"></div><p><button class="alt" onclick="board()">[ hall of the haunted ]</button></p>';
+ foot();hud();evid()}
+async function auth(m){
+ var u=$("un").value.trim(),p=$("pw").value,gh=$("gh"),all=users(),key=u.toLowerCase();
+ if(!u||p.length<4){gh.textContent="GHOST_404: IDENTIFY YOURSELF PROPERLY.";return}
+ if(m==="r"){
+  if(all[key]){gh.textContent="GHOST_404: THAT NAME IS ALREADY HAUNTED.";return}
+  var s=Math.random().toString(36).slice(2);all[key]={name:u,salt:s,h:await hx(s+p),fn:$("fn").value.trim(),sec:$("sec").value.trim(),made:Date.now()};sj("g404_users",all)}
+ else{var a=all[key];if(!a||a.h!==await hx(a.salt+p)){gh.textContent="GHOST_404: NO.";return}}
+ U=all[key].name;sj("g404_session",key);start()}
+function start(){
+ var k=U.toLowerCase();P=gj("g404_p_"+U,null);
+ if(!P){P={stage:1,ans:[],start:Date.now(),wrong:0,finish:0};savep()}
+ game()}
+function logout(){try{localStorage.removeItem("g404_session")}catch(e){}U=null;P=null;authView("l")}
+
+async function game(msg){
+ hud();evid();foot();
+ if(P.finish){return done()}
+ var n=P.stage,html=n===1?$("s1").innerHTML:await unlock(BL[n],P.ans[n-2]);
+ if(html===null){html="<p class='bad'>The trace is corrupted.</p>"}
+ $("app").innerHTML=(msg?'<div class="ghost" id="gm"></div>':'')+'<h2>'+TT[n]+'</h2>'+html+'<input id="ans" autocomplete="off" spellcheck="false" placeholder="&gt; _"><button onclick="submit()">[ SUBMIT ]</button><div class="ghost" id="gh"></div><p><button class="alt" id="hb" onclick="hint()">[ whisper a hint ]</button></p><div class="box mono" id="hn" style="display:none"></div>';
+ if(msg)typeIt($("gm"),"GHOST_404: "+msg);
+ showHint();
+ $("ans").addEventListener("keydown",function(e){if(e.key==="Enter")submit()})}
+var HC=0;function hint(){var n=P.stage;P.hl=P.hl||{};var t=P.hl[n]||0;if(t>=3)return;var b=$("hb");if(t>0&&!HC){HC=1;b.textContent="[ tap again: costs 15 pts ]";setTimeout(function(){HC=0;showHint()},3500);return}HC=0;P.hl[n]=t+1;P.hints=(P.hints||0)+1;try{savep()}catch(e){}try{hud()}catch(e){}showHint()}
+function showHint(){var n=P.stage,t=(P.hl||{})[n]||0,h=$("hn");if(!h)return;var o=[];for(var i=0;i<t;i++)o.push("["+(i+1)+"/3] "+HT[n][i]);h.innerHTML=o.map(esc).join("<br><br>");h.style.display=t?"block":"none";var b=$("hb");if(b)b.textContent=t>=3?"[ no more whispers ]":(t?"[ another whisper ]":"[ whisper a hint ]")}
+async function submit(){
+ var v=$("ans").value;if(!norm(v))return;var n=P.stage,r=await unlock(BL[n+1],v);
+ if(r!==null){P.ans.push(norm(v));P.stage=n+1;
+  if(n===7){P.finish=Math.floor((Date.now()-P.start)/1000);P.score=score();savep();return done()}
+  savep();game(GM[n])}
+ else{P.wrong++;savep();hud();var i=$("ans");$("gh").textContent="GHOST_404: "+((DC[n]||{})[norm(v)]||"NO.");i.classList.remove("shake");void i.offsetWidth;i.classList.add("shake")}}
+function skin(){var o=[],w=document.createTreeWalker(document,128),n;while(n=w.nextNode())o.push(n.nodeValue.trim());var m=document.querySelector('meta[name=whisper]');$("skin").innerHTML="<b>[ THE SECOND SKIN ]</b> (tap to close)\n\nwhisper: "+esc(m?m.content:"")+"\n\n"+o.map(esc).join("\n\n");$("skin").style.display="block"}
+function sw(b){$("swo").textContent=b.dataset.h.toUpperCase()}
+function stego(){
+ var c=$("cv"),x=c.getContext("2d");x.fillStyle="#12061f";x.fillRect(0,0,640,360);
+ var g=x.createRadialGradient(320,170,10,320,170,300);g.addColorStop(0,"#3b1a5c");g.addColorStop(1,"#12061f");x.fillStyle=g;x.fillRect(0,0,640,360);
+ x.fillStyle="#ff7a18";x.beginPath();x.ellipse(320,175,110,95,0,0,7);x.fill();
+ x.fillStyle="#12061f";x.beginPath();x.moveTo(265,150);x.lineTo(295,150);x.lineTo(280,120);x.fill();x.beginPath();x.moveTo(345,150);x.lineTo(375,150);x.lineTo(360,120);x.fill();
+ x.beginPath();x.moveTo(250,200);for(var i=0;i<8;i++)x.lineTo(250+i*17+8,i%2?200:225);x.lineTo(390,200);x.fill();
+ x.fillStyle="#6b8e23";x.fillRect(316,70,10,24);
+ x.font="bold 26px Courier New";x.textAlign="center";x.fillStyle="#f1e6d0";x.fillText("YOU ARE GETTING CLOSER.",320,335);
+ var im=x.getImageData(0,0,640,360),d=im.data,t=c.dataset.stego+"\0",bits=[];
+ for(var k=0;k<t.length;k++)for(var b=7;b>=0;b--)bits.push((t.charCodeAt(k)>>b)&1);
+ for(var j=0;j<bits.length;j++)d[j*4]=(d[j*4]&254)|bits[j];
+ x.putImageData(im,0,0);var q=document.createElement("img");q.id="cvi";q.alt="portrait";q.src=c.toDataURL("image/png");c.style.display="none";c.parentNode.insertBefore(q,c)}
+function dl(){var a=document.createElement("a");a.href=$("cv").toDataURL("image/png");a.download="you_are_getting_closer.png";document.body.appendChild(a);a.click();a.remove()}
+function done(){
+ var all=gj("g404_board",{});all[U.toLowerCase()]={user:U,score:P.score,time:P.finish,wrong:P.wrong};sj("g404_board",all);
+ var rows=Object.values(all).sort(function(a,b){return b.score-a.score||a.time-b.time}),rk=1;
+ rows.forEach(function(r,i){if(r.user===U)rk=i+1});
+ $("app").innerHTML='<div class="box mono">ACCESS GRANTED\n\nGHOST_404 HAS BEEN FOUND.\n\nBUT THERE IS ONE LAST MESSAGE:\n\n"CONGRATULATIONS, INVESTIGATOR.\nYOU DIDN\'T DEFEAT THE GHOST.\nYOU UNDERSTOOD IT."\n\nCASE CLOSED.</div><h2>🏆 INVESTIGATION COMPLETE</h2><table><tr><th>Investigator</th><td>'+esc(U)+'</td></tr><tr><th>Time</th><td>'+fmt(P.finish)+'</td></tr><tr><th>Wrong attempts</th><td>'+P.wrong+'</td></tr><tr><th>Score</th><td>'+P.score+'</td></tr><tr><th>Rank</th><td>#'+rk+' of '+rows.length+'</td></tr></table><p><button class="alt" onclick="board()">[ hall of the haunted ]</button></p>';
+ hud();evid();foot()}
+async function board(){
+ var rows=Object.values(gj("g404_board",{})),src="this device";
+ if(DB){try{var s=await DB.collection("board").get();rows=s.docs.map(function(d){return d.data()}).filter(function(r){return r.done});src="shared board"}catch(e){}}
+ rows.sort(function(a,b){return b.score-a.score||a.time-b.time});
+ $("app").innerHTML='<h2>☠ HALL OF THE HAUNTED</h2><p class="dim">source: '+src+'</p><div class="box mono">'+(rows.length?rows.slice(0,20).map(function(r,i){return(i+1)+". "+esc(r.user)+" — "+r.score+" pts — "+fmt(r.time)+" — ✗"+r.wrong}).join("\n"):"No one has survived yet.")+'</div><button class="alt" onclick="U?game():authView(\'l\')">[ back ]</button>'}
+(async function(){
+ try{if(window.claude){DB=await claude.use("db")}}catch(e){DB=null}
+ var all=users(),s=gj("g404_session",null);
+ if(s&&all[s]){U=all[s].name;start()}else authView("l")})();
+</script>
+</body>
+</html>
